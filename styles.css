@@ -351,13 +351,45 @@ section{
 .nosotros{
   background: #000
 }
-.contacto{
-    background: pink;
-}
+
 
 .productos{
-    background: ;
+    background: white;
+    height: 90vh;
+    margin-top: 10vh!important;
 }
+.productos h2{
+  font-family: 'Viga',sans-serif;
+  margin-top: 10vh;
+  font-size: 55px;
+  color:black;
+}
+.producto_component{
+  height: 90vh;
+}
+.producto_component img{
+  width: 20vw;
+  margin-top: 4vh;
+}
+.producto_component p{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-transform: initial;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px;
+  font-weight: 100;
+  
+}
+.p_container_productos{
+  height: 60vh;
+  width: 25vw;
+  background-image: linear-gradient(to bottom, #FFF, #2E2F30);
+  border-radius: 4vh;
+  margin-top: 5vh;
+  margin-left:3vw;
+}
+
 
 .servicios{
     background: #D67329;
@@ -365,18 +397,134 @@ section{
     
 }
 .servicios h1{
-  font-family: 'Viga' sans-serif!important;
-  size: 55px;
+  font-family: 'Viga', sans-serif!important;
+  font-size: 55px!important;
   margin-top: 10vw;
+}
+.servicio_component{
+  margin-top: 2vh;
+  
+}
+.servicio_component img{
+  width: 12vw;
+}
+.servicio_component h2{
+  margin-top: 1vh;
+  font-family: 'Viga', sans-serif;
+  color: white;
+  font-size: 38px;
+}
+.servicio_component p{
+  color: black;
+  letter-spacing: 1.5px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 25px;
+  font-size: 16px;
+ 
+  padding-left: 4vw;
+  padding-right: 4vw;
+
 }
 .servicio{
   height: 90vh;
 }
 
 .clientes{
-    background: green;
+    background: #635F5C;
+    margin-top: 10vh;
+    height: 120vh;
 }
-
+.clientes h1{
+  margin-top: 10vh;
+  font-family: 'Viga', sans-serif;
+  font-size: 55px;
+}
+.contacto{
+  background: black;
+  
+}
+.contacto h1{
+  margin-top: 15vh;
+  font-family: 'Viga', sans-serif;
+  font-size: 55px;
+  float:left!important;
+}
+.contacto_container{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40vw;
+}
+.input_nombre{
+  width: 40vw;
+  background: black;
+  border-radius: 1vh;
+  border-color: white;
+  height: 5vh;
+  
+  
+}
+.contacto_container *::placeholder{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 2.5vh;
+  padding-top:1vh;
+  padding-bottom: 1vh;
+  padding-left: 1vw;
+}
+.input_email{
+  width: 40vw;
+  height: 5vh;
+  margin-top:1vh ;
+  background: black;
+  border-radius: 1vh;
+  border-color: white;
+  
+}
+textarea{
+  width: 40vw;
+  margin-top: 1vh!important;
+  background: black;
+  border-radius: 1vh;
+  border-color: white;
+  height: 30vh;
+  padding: 0!important;
+}
+.enviar_button{
+  width: 10vw;
+  height: 5vh;
+  border-radius: 3vh!important;
+  align-self: flex-end;
+  margin-top: 2vh;
+  background:#D67329;
+  border:none;
+  font-family: 'Roboto' , sans-serif;
+  color:black;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.white{
+  width: 100vw;
+  height: 20vh;
+  background: white;
+  z-index: 2000;
+  position: absolute;
+  left: 0;
+  bottom: 15vh;
+  padding: 2vh;
+}
+.footer_1{
+  height: 16vh;
+  width:40vw;
+  background: white;
+  border-right: 2px solid #635F5C;
+}
+.footer_2{
+  height: 16vh;
+  width: 15vw;
+  background: white;
+}
 
 
 /* Para meterle background IMG a los parallax *
