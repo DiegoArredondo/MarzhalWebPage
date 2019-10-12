@@ -356,7 +356,7 @@ section{
 }
 
 .productos{
-    background: ;
+    
 }
 
 .servicios{
@@ -400,3 +400,10 @@ section{
 }
 */
 
+
+
+#contacto.position2{
+  position: fixed;
+  top: 0;
+  left: 45vw;
+}
