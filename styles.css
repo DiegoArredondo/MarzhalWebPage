@@ -5,7 +5,15 @@ html,
 body {
   background: #000 !important;
 }
-
+.background:first-child, .background:nth-child(2){
+  display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+video {
+  max-width: 100%;
+  max-height: 100%;
+}
 header {
   background-color: black !important ;
   height: 300px !important;
@@ -154,6 +162,7 @@ nav ul li a:hover {
   transition: all 0.5s;
   cursor: pointer;
   display: inline-block;
+  outline: none;
 }
 
 .button1 span {
@@ -181,7 +190,7 @@ nav ul li a:hover {
   right: 0;
 }
 
-.float {
+.float, .float:active, .float:visited {
   position: fixed;
   width: 60px;
   height: 60px;
@@ -417,6 +426,7 @@ section {
   font-size: 55px;
   float: left !important;
 }
+
 .contacto_container {
   height: 80vh;
   display: flex;
@@ -469,6 +479,18 @@ textarea {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+.map-side {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 3vh;
+}
+#map {
+  width: 35vw;
+  height: 50vh;
+}
+
 .white {
   width: 100vw;
   height: 20vh;
@@ -477,20 +499,70 @@ textarea {
   position: absolute;
   left: 0;
   bottom: 15vh;
-  padding: 2vh;
+  padding: 2vh 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
 .footer_1 {
   height: 16vh;
-  width: 40vw;
+  width: 30vw;
+  padding-right: 2vw;
   background: white;
-  border-right: 2px solid #635f5c;
+}
+.footer_1 img {
+  max-width: 7vw;
+  position: absolute;
+  bottom: 20px;
+}
+.footer_1 div {
+  padding-left: 9vw;
+  font-family: "Roboto", sans-serif;
+  color: #625f5b;
+  width: 30vw;
+}
+.footer_1 div h2 {
+  margin: 0;
+  font-family: "Viga", sans-serif;
 }
 .footer_2 {
   height: 16vh;
   width: 15vw;
   background: white;
+  padding: 0 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-left: 2px solid #635f5c;
 }
 
+.footer_2 a, .footer_2 a:active, .footer_2 a:visited, .footer_2 a:focus{
+  color: #635f5c;
+}
+
+.footer_3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30vw;
+  padding-left: 5vw;
+}
+.footer_3 .social-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+.footer_3 h4 {
+  margin: 0;
+  margin-top: 2vh;
+}
+.footer_3 h4 span {
+  color: #d67329;
+}
 /* Para meterle background IMG a los parallax *
 .background:nth-child(1) {
   background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
@@ -521,8 +593,21 @@ textarea {
 #contact-btn.position2 {
   position: fixed;
   bottom: 40px;
-  left: 40px;
+  left: 15px;
   z-index: 1000;
   padding: 5px 0;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
+}
+#contact-btn.position3 {
+  opacity: 0;
+  z-index: 0;
+}
+
+.hider{
+  left: -100vw !important;
+  opacity: 0;
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
