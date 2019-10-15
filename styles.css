@@ -5,10 +5,11 @@ html,
 body {
   background: #000 !important;
 }
-.background:first-child, .background:nth-child(2){
+.background:first-child,
+.background:nth-child(2) {
   display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 video {
   max-width: 100%;
@@ -190,7 +191,9 @@ nav ul li a:hover {
   right: 0;
 }
 
-.float, .float:active, .float:visited {
+.float,
+.float:active,
+.float:visited {
   position: fixed;
   width: 60px;
   height: 60px;
@@ -537,7 +540,10 @@ textarea {
   border-left: 2px solid #635f5c;
 }
 
-.footer_2 a, .footer_2 a:active, .footer_2 a:visited, .footer_2 a:focus{
+.footer_2 a,
+.footer_2 a:active,
+.footer_2 a:visited,
+.footer_2 a:focus {
   color: #635f5c;
 }
 
@@ -596,18 +602,23 @@ textarea {
   left: 15px;
   z-index: 1000;
   padding: 5px 0;
-  border: 1px solid #fff;
+  background: #000;
+  color: #FFF;
+}
+#contact-btn.contrast {
+  background: #000;
+  color: #d67329;
 }
 #contact-btn.position3 {
   opacity: 0;
   z-index: 0;
 }
 
-.hider{
+.hider {
   left: -100vw !important;
   opacity: 0;
 }
 
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }

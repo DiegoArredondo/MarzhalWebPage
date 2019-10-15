@@ -35,6 +35,12 @@ function parallaxScroll(evt) {
         } else {
           $('#contact-btn').removeClass("hider");
         }
+        if(currentSlideNumber == 2){
+          $('#contact-btn').addClass("contrast");
+          document.getElementById("video").play();
+        } else {
+          $('#contact-btn').removeClass("contrast");
+        }
         if(currentSlideNumber > 1){
           $('#contact-btn').addClass("position2");
           $('#goUp').removeClass("hidden");
