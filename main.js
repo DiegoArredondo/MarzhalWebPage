@@ -26,33 +26,7 @@ function parallaxScroll(evt) {
       ticking = true;
       if (currentSlideNumber !== totalSlideNumber - 1) {
         currentSlideNumber++;
-        console.log(currentSlideNumber);
-        /* CONTACT BUTTON MOVEMENT */
-        
-        if(currentSlideNumber == 0){
-          $('#contact-btn').addClass("hider");
-          document.getElementById("video").play();
-        } else {
-          $('#contact-btn').removeClass("hider");
-        }
-        if(currentSlideNumber == 2){
-          $('#contact-btn').addClass("contrast");
-          document.getElementById("video").play();
-        } else {
-          $('#contact-btn').removeClass("contrast");
-        }
-        if(currentSlideNumber > 1){
-          $('#contact-btn').addClass("position2");
-          $('#goUp').removeClass("hidden");
-        } else {
-          $('#contact-btn').removeClass("position2");
-          $('#goUp').addClass("hidden");
-        }
-        if(currentSlideNumber == 5){
-          $('#contact-btn').addClass("position3");
-        } else {
-          $('#contact-btn').removeClass("position3");
-        }
+        parallaxesStuff();
         nextItem();
       }
       slideDurationTimeout(slideDurationSetting);
@@ -62,28 +36,49 @@ function parallaxScroll(evt) {
       ticking = true;
       if (currentSlideNumber !== 0) {
         currentSlideNumber--;
-        if(currentSlideNumber == 0){
-          $('#contact-btn').addClass("hider");
-          document.getElementById("video").play();
-        } else {
-          $('#contact-btn').removeClass("hider");
-        }
-        if(currentSlideNumber > 1){
-          $('#contact-btn').addClass("position2");
-          $('#goUp').removeClass("hidden");
-        } else {
-          $('#contact-btn').removeClass("position2");
-          $('#goUp').addClass("hidden");
-        }
-        if(currentSlideNumber == 5){
-          $('#contact-btn').addClass("position3");
-        } else {
-          $('#contact-btn').removeClass("position3");
-        }
+        parallaxesStuff();
       }
       previousItem();
       slideDurationTimeout(slideDurationSetting);
     }
+  }
+}
+
+// ------------- TOGGLE MOBILE MENU  ------------- //
+function toggleMenu(){
+  $("section.menu-mobile").toggleClass("show");
+}
+
+// ------------- PLAY VIDEO  ------------- //
+function playVideo(){
+  if(window.innerWidth < 800) document.getElementById("video-mobile").play();
+  else document.getElementById("video-desktop").play();
+}
+
+// ------------- PARALLAXES STUFF ------------- //
+function parallaxesStuff(){
+  if(currentSlideNumber == 0){
+    $('#contact-btn').addClass("hider");
+    playVideo();
+  } else {
+    $('#contact-btn').removeClass("hider");
+  }
+  if(currentSlideNumber == 2){
+    $('#contact-btn').addClass("contrast");
+  } else {
+    $('#contact-btn').removeClass("contrast");
+  }
+  if(currentSlideNumber > 1){
+    $('#contact-btn').addClass("position2");
+    $('#goUp').removeClass("hidden");
+  } else {
+    $('#contact-btn').removeClass("position2");
+    $('#goUp').addClass("hidden");
+  }
+  if(currentSlideNumber == 5){
+    $('#contact-btn').addClass("position3");
+  } else {
+    $('#contact-btn').removeClass("position3");
   }
 }
 
@@ -217,5 +212,7 @@ function initMap() {
 
 
 $(document).ready(function(){
-  document.getElementById("video").play();
+  playVideo();
 })
+
+

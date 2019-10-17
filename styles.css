@@ -107,7 +107,7 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-.h1 {
+.h2 {
   color: white;
   background: black;
   height: 80px;
@@ -121,19 +121,18 @@ nav ul li a:hover {
   padding-top: 50px;
 }
 .somos {
-  background: black;
   font-family: "Viga", sans-serif;
   text-align: right;
-  height: 55px;
+  height: 5vw;
   width: 100%;
-  font-size: 55px !important;
+  font-size: 5vw !important;
 }
 .somos_text {
   text-align: right;
   font-family: "Roboto", sans-serif;
   color: #d67329;
   margin-top: 30px;
-  font-size: 18px !important;
+  font-size: 1.8vw !important;
   font-weight: 100;
   line-height: 149%;
   letter-spacing: 3px;
@@ -228,6 +227,7 @@ section {
   -webkit-transform: translateY(30vh);
   transform: translateY(30vh);
   transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+  background-color: #000;
 }
 .background:before {
   content: "";
@@ -348,7 +348,7 @@ section {
 .productos h2 {
   font-family: "Viga", sans-serif;
   margin-top: 10vh;
-  font-size: 55px;
+  font-size: 5vw;
   color: black;
 }
 .producto_component {
@@ -362,7 +362,7 @@ section {
   color: white;
   font-family: "Roboto", sans-serif;
   text-transform: initial;
-  font-size: 18px;
+  font-size: 1.8vw;
   text-align: center;
   margin: 20px;
   font-weight: 100;
@@ -372,16 +372,15 @@ section {
   width: 25vw;
   background-image: linear-gradient(to bottom, #fff, #2e2f30);
   border-radius: 4vh;
-  margin-top: 5vh;
-  margin-left: 3vw;
+  margin: 5vh 3vw;
 }
 
 .servicios {
   background: #d67329;
 }
-.servicios h1 {
+.servicios h2 {
   font-family: "Viga", sans-serif !important;
-  font-size: 55px !important;
+  font-size: 5vw !important;
   margin-top: 10vw;
 }
 .servicio_component {
@@ -415,18 +414,18 @@ section {
   margin-top: 10vh;
   height: 120vh;
 }
-.clientes h1 {
+.clientes h2 {
   margin-top: 10vh;
   font-family: "Viga", sans-serif;
-  font-size: 55px;
+  font-size: 5vw;
 }
 .contacto {
   background: black;
 }
-.contacto h1 {
+.contacto h2 {
   margin-top: 15vh;
   font-family: "Viga", sans-serif;
-  font-size: 55px;
+  font-size: 5vw;
   float: left !important;
 }
 
@@ -448,9 +447,12 @@ section {
   font-family: "Roboto", sans-serif;
   color: white;
   font-size: 2.5vh;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  padding-left: 1vw;
+  padding: 0;
+}
+.contacto_container input,
+.contacto_container textarea {
+  padding: 2vh;
+  font-size: 1.2vw;
 }
 .input_email {
   width: 40vw;
@@ -467,7 +469,6 @@ textarea {
   border-radius: 1vh;
   border-color: white;
   height: 30vh;
-  padding: 0 !important;
 }
 .enviar_button {
   width: 10vw;
@@ -569,26 +570,6 @@ textarea {
 .footer_3 h4 span {
   color: #d67329;
 }
-/* Para meterle background IMG a los parallax *
-.background:nth-child(1) {
-  background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
-}
-.background:nth-child(2) {
-  background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
-}
-.background:nth-child(3) {
-  background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
-}
-.background:nth-child(4) {
-  background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
-}
-.background:nth-child(5) {
-  background-image: url(https://i.postimg.cc/W14vywqg/photo-1424746219973-8fe3bd07d8e3.jpg);
-}
-.background:nth-child(6) {
-  background-image: url(https://i.postimg.cc/TY0xQ41T/photo-1433840496881-cbd845929862.jpg);
-}
-*/
 
 #contact-btn.position1 {
   position: absolute;
@@ -603,7 +584,7 @@ textarea {
   z-index: 1000;
   padding: 5px 0;
   background: #000;
-  color: #FFF;
+  color: #fff;
 }
 #contact-btn.contrast {
   background: #000;
@@ -621,4 +602,129 @@ textarea {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 800px) {
+  #video-desktop {
+    display: none;
+  }
+  header {
+    display: none !important;
+  }
+  .servicio {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .servicio:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+  .servicio p {
+    width: 60%;
+  }
+
+  .productos {
+    height: 100vh;
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .prods-flex {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 65vh;
+  }
+  .producto_component {
+    width: auto;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+  }
+  .p_container_productos {
+    width: auto;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to right, #fff, #777, #2e2f30);
+  }
+  .p_container_productos img {
+    max-width: 20vw;
+    max-height: 16vh;
+    margin-top: 4vh;
+  }
+  .p_container_productos p {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  #video-mobile {
+    display: none;
+  }
+}
+
+#toggler-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  width: 15vw;
+  height: 12vw;
+}
+
+.icon-bar {
+  border: 1px solid #fff !important;
+  width: 100% !important;
+  height: 1vw !important;
+  background: #fff !important;
+}
+
+.icon-bar:nth-child(2) {
+  margin: 1.5vw 0 !important;
+}
+
+section.menu-mobile {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  left: -120vw;
+  top: -120vh;
+  /* top: 0; */
+  transition: ease-in 0.5s;
+  z-index: 1500;
+  border-radius: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+section.menu-mobile img {
+  width: 40%;
+}
+section.menu-mobile.show {
+  left: 0 !important;
+  top: 0 !important;
+  border-radius: 0;
+}
+
+ul.menu li {
+  list-style: none;
+  padding: 1vh 0;
+  font-size: 5vw;
+}
+
+ul.menu a:active,
+ul.menu a:visited,
+ul.menu a {
+  color: #d67329;
+  font-weight: bold;
 }
