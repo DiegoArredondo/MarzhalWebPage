@@ -14,3 +14,10 @@ def send_root(path):
 @app.route('/hello')
 def hello():
     return ("Hola")
+
+
+
+
+@app.route('/adios')
+def bye():
+    return ("Adiós")
