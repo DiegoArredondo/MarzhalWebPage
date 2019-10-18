@@ -125,14 +125,14 @@ nav ul li a:hover {
   text-align: right;
   height: 5vw;
   width: 100%;
-  font-size: 5vw !important;
+  font-size: 5vw;
 }
 .somos_text {
   text-align: right;
   font-family: "Roboto", sans-serif;
   color: #d67329;
   margin-top: 30px;
-  font-size: 1.8vw !important;
+  font-size: 1.8vw;
   font-weight: 100;
   line-height: 149%;
   letter-spacing: 3px;
@@ -140,10 +140,8 @@ nav ul li a:hover {
 
 .img_zorro {
   height: 400px;
-  justify-content: flex-start;
   margin-left: 100px;
   display: block;
-  font-size: 26px !important;
 }
 
 .button1 {
@@ -380,7 +378,7 @@ section {
 }
 .servicios h2 {
   font-family: "Viga", sans-serif !important;
-  font-size: 5vw !important;
+  font-size: 5vw;
   margin-top: 10vw;
 }
 .servicio_component {
@@ -611,6 +609,24 @@ textarea {
   header {
     display: none !important;
   }
+  #contact-btn.position1 {
+    bottom: 40px;
+    left: 15px;
+  }
+  .somos_text {
+    font-size: 4vw;
+  }
+  .img_zorro {
+    height: 30vh;
+    margin: 5vh 0;
+    float: right;
+  }
+
+  .servicios {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10vh;
+  }
   .servicio {
     height: auto;
     width: 100%;
@@ -626,6 +642,12 @@ textarea {
     width: 60%;
   }
 
+  .servicio div {
+    width: 40%;
+  }
+  .servicio div h2 {
+    font-size: 7vw !important;
+  }
   .productos {
     height: 100vh;
     margin-top: 0 !important;
@@ -659,10 +681,40 @@ textarea {
   .p_container_productos img {
     max-width: 20vw;
     max-height: 16vh;
-    margin-top: 4vh;
+    margin-top: 0;
   }
   .p_container_productos p {
     width: 60%;
+  }
+
+  .servicio_component p {
+    font-size: 3vw;
+  }
+  h2 {
+    font-size: 10vw !important;
+  }
+
+  .contacto_container {
+    width: 100%;
+    height: auto;
+  }
+  .contacto_container h2 {
+    margin-top: 3vh;
+  }
+  .contacto_container input,
+  .contacto_container textarea {
+    width: 100%;
+    padding: 2vh;
+    font-size: 4.5vw;
+    outline: none;
+  }
+  .enviar_button{
+    padding: 0 7vw;
+    width: auto;
+  }
+  #map {
+    width: 100%;
+    height: 15vh;
   }
 }
 @media only screen and (min-width: 800px) {
