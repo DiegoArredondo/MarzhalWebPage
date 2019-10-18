@@ -1,4 +1,4 @@
 steps:
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy", "--version v1", "--stop-previous-version"]
+  args: ["app", "deploy", "version v1", "stop-previous-version"]
 timeout: "60s"
