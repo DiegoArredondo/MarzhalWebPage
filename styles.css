@@ -120,6 +120,9 @@ nav ul li a:hover {
   height: 100vh;
   padding-top: 50px;
 }
+.nosotros .row{
+  width: 100%;
+}
 .somos {
   font-family: "Viga", sans-serif;
   text-align: right;
@@ -132,7 +135,7 @@ nav ul li a:hover {
   font-family: "Roboto", sans-serif;
   color: #d67329;
   margin-top: 30px;
-  font-size: 1.8vw;
+  font-size: 1.2vw;
   font-weight: 100;
   line-height: 149%;
   letter-spacing: 3px;
@@ -515,6 +518,7 @@ textarea {
 .footer_1 h2{
     font-size: 2.5vw;
     display: block;
+    width: 100%;
 }
 .footer_1 img {
   max-width: 7vw;
