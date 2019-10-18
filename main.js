@@ -2,7 +2,7 @@
 var ticking = false;
 var isFirefox = (/Firefox/i.test(navigator.userAgent));
 var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(navigator.userAgent));
-var scrollSensitivitySetting = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive) 
+var scrollSensitivitySetting = 30; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive)
 var slideDurationSetting = 600; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
 var totalSlideNumber = 6;
@@ -23,6 +23,7 @@ function parallaxScroll(evt) {
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {
       //Down scroll
+      
       ticking = true;
       if (currentSlideNumber !== totalSlideNumber - 1) {
         currentSlideNumber++;
@@ -111,7 +112,7 @@ function previousItem() {
 function movePage(slideNum) {
   $("section.menu-mobile").removeClass("show");
   ticking = true;
-  if(slideNum > currentSlideNumber) 
+  if(slideNum > currentSlideNumber)
   while(currentSlideNumber < slideNum){
     currentSlideNumber++;
     nextItem();
@@ -130,7 +131,7 @@ function movePage(slideNum) {
 function initMap() {
   // The location of Uluru
   var uluru = {lat: 27.4937, lng: -109.998691};
-  
+
   var map = new google.maps.Map(document.getElementById('map'), {
     center: uluru,
     zoom: 15,
@@ -217,7 +218,7 @@ function initMap() {
   });
 
   var marker = new google.maps.Marker({position: uluru, map: map});
-  
+
 }
 
 
