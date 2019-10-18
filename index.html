@@ -17,13 +17,13 @@
 
 <body>
   <!-- GO UP BUTTON -->
-  <a href="#" class="float hidden" id="goUp">
+  <a href="#" class="float hidden" id="goUp" onclick="movePage(0)">
     <i class="glyphicon glyphicon-chevron-up my-float">
     </i>
   </a>
   <!-- CONTACT BUTTON -->
   <button class="button1 position1 position2 hider" style="vertical-align:middle" id="contact-btn"
-    onclick="goToContact()"><span>CONTACTO</span></button>
+    onclick="movePage(5)"><span>CONTACTO</span></button>
 
   <button id="toggler-btn" class="navbar-toggle" onclick="toggleMenu()">
     <span class="icon-bar"></span>
@@ -35,61 +35,61 @@
     <img src="/marzhal_logo.png" alt="">
     <ul class="menu">
       <li>
-        <a href="">INICIO</a>
+        <span onclick="movePage(0)">INICIO</span>
       </li>
 
       <li>
-        <a href="">NOSOTROS</a>
+        <span onclick="movePage(1)">NOSOTROS</span>
       </li>
 
       <li>
-        <a href="">SERVICIOS</a>
+        <span onclick="movePage(2)">SERVICIOS</span>
       </li>
 
       <li>
-        <a href="">PRODUCTOS</a>
+        <span onclick="movePage(3)">PRODUCTOS</span>
       </li>
 
       <li>
-        <a href="">CLIENTES</a>
+        <span onclick="movePage(4)">CLIENTES</span>
       </li>
 
       <li>
-        <a href="">CONTACTO</a>
+        <span onclick="movePage(5)">CONTACTO</span>
       </li>
     </ul>
   </section>
 
 
   <header class="site-header">
-    <div class="brand">
-      <a href=""><img src="Componente 1 – 1@2x.png" alt="marzhal" /></a>
-    </div>
 
     <nav>
+        <div class="brand">
+            <a href=""><img src="Componente 1 – 1@2x.png" alt="marzhal" /></a>
+          </div>
       <ul>
         <li>
-          <a href="">INICIO</a>
+          <span onclick="movePage(0)">INICIO</span>
         </li>
-
+  
         <li>
-          <a href="">NOSOTROS</a>
+          <span onclick="movePage(1)">NOSOTROS</span>
         </li>
-
+  
         <li>
-          <a href="">SERVICIOS</a>
+          <span onclick="movePage(2)">SERVICIOS</span>
         </li>
-
+  
         <li>
-          <a href="">PRODUCTOS</a>
+          <span onclick="movePage(3)">PRODUCTOS</span>
         </li>
-
+  
         <li>
-          <a href="">CLIENTES</a>
+          <span onclick="movePage(4)">CLIENTES</span>
         </li>
-
+  
         <li>
-          <a href="">CONTACTO</a>
+          <span onclick="movePage(5)">CONTACTO</span>
         </li>
       </ul>
     </nav>
