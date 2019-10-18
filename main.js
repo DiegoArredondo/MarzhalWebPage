@@ -106,12 +106,22 @@ function previousItem() {
   var $currentSlide = $(".background").eq(currentSlideNumber);
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
 }
-function goToContact() {
+// -------------- IN-PAGE MOTION  ------------- //
+
+function movePage(slideNum) {
+  $("section.menu-mobile").removeClass("show");
   ticking = true;
-  currentSlideNumber = 4;
-  var $previousSlide = $(".background").eq(3);
-  $previousSlide.removeClass("up-scroll").addClass("down-scroll");
-  slideDurationTimeout(slideDurationSetting);
+  if(slideNum > currentSlideNumber)
+  while(currentSlideNumber < slideNum){
+    currentSlideNumber++;
+    nextItem();
+  }
+  else while(currentSlideNumber > slideNum){
+    currentSlideNumber--;
+    previousItem();
+  }
+  slideDurationTimeout();
+  parallaxesStuff();
 }
 
 
@@ -213,6 +223,6 @@ function initMap() {
 
 $(document).ready(function(){
   playVideo();
-})
+});
 
 
