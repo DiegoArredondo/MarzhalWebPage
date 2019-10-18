@@ -222,6 +222,15 @@ function initMap() {
 
 
 $(document).ready(function(){
+
+  // Stuff for vw && vh stability
+
+  const height = window.height;
+  $("html").css("min-height", height);
+  $("body").css("min-height", height);
+  $("html").css("height", height);
+  $("body").css("height", height);
+
   playVideo();
 });
 
