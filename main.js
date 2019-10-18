@@ -111,7 +111,7 @@ function previousItem() {
 function movePage(slideNum) {
   $("section.menu-mobile").removeClass("show");
   ticking = true;
-  if(slideNum > currentSlideNumber)
+  if(slideNum > currentSlideNumber) 
   while(currentSlideNumber < slideNum){
     currentSlideNumber++;
     nextItem();
