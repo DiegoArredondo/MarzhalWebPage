@@ -9,3 +9,8 @@ def hello():
 @app.route('/<path:path>')
 def send_root(path):
     return send_from_directory('', path)
+
+
+@app.route('/hello')
+def hello():
+    return ("Hola")
