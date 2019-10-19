@@ -347,7 +347,7 @@ section {
 }
 .productos h2 {
   font-family: "Viga", sans-serif;
-  margin-top: 10vh;
+  margin-top: 90px;
   font-size: 5vw;
   color: black;
 }
@@ -381,7 +381,6 @@ section {
 .servicios h2 {
   font-family: "Viga", sans-serif !important;
   font-size: 5vw;
-  margin-top: 10vw;
 }
 .servicio_component {
   margin-top: 2vh;
@@ -399,9 +398,8 @@ section {
   color: black;
   letter-spacing: 1.5px;
   font-family: "Roboto", sans-serif;
-  line-height: 25px;
-  font-size: 16px;
-
+  font-size: 1.2vw;
+  line-height: 1.9vw;
   padding-left: 4vw;
   padding-right: 4vw;
 }
@@ -415,7 +413,7 @@ section {
   height: 120vh;
 }
 .clientes h2 {
-  margin-top: 10vh;
+  margin-top: 90px;
   font-family: "Viga", sans-serif;
   font-size: 5vw;
 }
@@ -423,7 +421,7 @@ section {
   background: black;
 }
 .contacto h2 {
-  margin-top: 15vh;
+  margin-top: 90px;
   font-family: "Viga", sans-serif;
   font-size: 5vw;
   float: left !important;
@@ -576,7 +574,7 @@ textarea {
 
 #contact-btn.position1 {
   position: absolute;
-  bottom: 20vh;
+  bottom: 13vh;
   left: 37vw;
   z-index: 1000;
 }
@@ -640,7 +638,7 @@ textarea {
     align-items: center;
     justify-content: space-evenly;
   }
-  .servicio:nth-child(3) {
+  .servicio:nth-child(2) {
     flex-direction: row-reverse;
   }
   .servicio p {
@@ -694,6 +692,7 @@ textarea {
 
   .servicio_component p {
     font-size: 3vw;
+    line-height: 4vw;
   }
   h2 {
     font-size: 10vw !important;
@@ -706,6 +705,7 @@ textarea {
   .contacto_container h2 {
     margin-top: 3vh;
   }
+
   .contacto_container input,
   .contacto_container textarea {
     width: 100%;
@@ -781,27 +781,57 @@ textarea {
   }
 }
 @media only screen and (max-width: 1100px) {
-  .brand{
+  .brand {
     left: -5vw;
   }
 }
 @media only screen and (max-width: 900px) {
-  .brand{
+  .brand {
     display: none;
   }
 }
+/* CONTACT SOCIAL BUTTONS FOR IPAD */
 @media only screen and (min-width: 650px) and (max-width: 769px) {
-  .social-buttons{
+  .social-buttons {
     max-height: 1vh;
   }
 }
-
 @media only screen and (min-width: 769px) {
+  /* USE BIGGER VIDEO */
   #video-mobile {
     display: none;
   }
+  /* CORRECT DISPLAY OF SERVICIOS */
+  div.row.servicios {
+    display: flex !important;
+    padding: 90px 0;
+  }
+  div.servicios-flex div.servicio_component {
+    height: auto;
+  }
 }
+/* CORRECT IPAD PRO DISPLAY */
+@media only screen and (width: 1024px) and (height: 1366px) {
 
+  .footer_1{
+    display: inline-flex;
+    align-items: flex-end;
+  }
+  .productos h2{
+    padding-top: 5vh;
+  }
+  #contacto .content-wrapper {
+    padding-top: 90px;
+  }
+  #contacto .contacto_container {
+    height: auto;
+    padding-top: 3vh;
+    width: 45vw;
+  }
+  .contacto h2 {
+    margin-top: 0;
+  }
+}
 
 #toggler-btn {
   position: absolute;
@@ -854,8 +884,7 @@ ul.menu li {
   font-size: 5vw;
 }
 
-ul.menu span{
+ul.menu span {
   color: #d67329;
   font-weight: bold;
 }
- 
