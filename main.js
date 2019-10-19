@@ -7,6 +7,9 @@ var slideDurationSetting = 600; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
 var totalSlideNumber = 6;
 
+const h;
+const w;
+
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
   if (isFirefox) {
@@ -240,8 +243,13 @@ $(document).ready(function(){
 // IMPORTANTE
 // HACE QUE NO CAMBIE EL TAMAÑO DE LA PAGINA CUANDO SE ABRE EL TECLADO
 function viewport () {
-  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  if(w == undefined || w == null || !w){
+   w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+   h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  }
+  var metaViewport = document.querySelector('meta[name=viewport]');
+  metaViewport.setAttribute('width', w);
+  metaViewport.setAttribute('height', h);
   $("html").css({"width":w,"height":h});
   $("body").css({"width":w,"height":h});
 }
