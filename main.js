@@ -7,11 +7,11 @@ var slideDurationSetting = 600; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
 var totalSlideNumber = 6;
 
-const h;
-const w;
-
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
+
+  if(window.innerWidth <= 768) return;
+
   if (isFirefox) {
     //Set delta for Firefox
     delta = evt.detail * (-120);
@@ -102,10 +102,6 @@ function nextItem() {
   var $previousSlide = $(".background").eq(currentSlideNumber - 1);
   $previousSlide.removeClass("up-scroll").addClass("down-scroll");
 }
-function nextItem() {
-  var $previousSlide = $(".background").eq(currentSlideNumber - 1);
-  $previousSlide.removeClass("up-scroll").addClass("down-scroll");
-}
 function previousItem() {
   var $currentSlide = $(".background").eq(currentSlideNumber);
   $currentSlide.removeClass("down-scroll").addClass("up-scroll");
@@ -113,6 +109,40 @@ function previousItem() {
 // -------------- IN-PAGE MOTION  ------------- //
 
 function movePage(slideNum) {
+
+  if(window.innerWidth > 768) desktopScroll(slideNum);
+  else mobileScroll(slideNum);
+}
+
+function mobileScroll(slideNum){
+  var str="";
+  switch(slideNum){
+    case 0:
+      str = "inicio";
+      break;
+    case 1:
+      str = "nosotros";
+      break;
+    case 2:
+      str = "servicios";
+      break;
+    case 3:
+      str = "productos";
+      break;
+    case 4:
+      str = "clientes";
+      break;
+    case 5:
+      str = "contacto";
+      break;
+  }
+  $("section.menu-mobile").removeClass("show");
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $("#" + str).offset().top
+}, 500);
+}
+
+function desktopScroll(slideNum){
   $("section.menu-mobile").removeClass("show");
   ticking = true;
   if(slideNum > currentSlideNumber)
@@ -221,37 +251,21 @@ function initMap() {
   });
 
   var marker = new google.maps.Marker({position: uluru, map: map});
-
 }
 
 
 $(document).ready(function(){
 
-  // Stuff for vw && vh stability
-
-  const height = window.height;
-  $("html").css("min-height", height);
-  $("body").css("min-height", height);
-  $("html").css("height", height);
-  $("body").css("height", height);
-
-  viewport();
+  var _originalSize = $(window).width() + $(window).height()
+  /* $(window).resize(function(){
+    if($(window).width() + $(window).height() != _originalSize){
+      console.log("keyboard show up");
+      $(".white").toggle();
+    }else{
+      console.log("keyboard closed");
+      $(".white").toggle();
+    }
+  }); */
 
   playVideo();
 });
-
-// IMPORTANTE
-// HACE QUE NO CAMBIE EL TAMAÑO DE LA PAGINA CUANDO SE ABRE EL TECLADO
-function viewport () {
-  if(w == undefined || w == null || !w){
-   w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-   h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-  }
-  var metaViewport = document.querySelector('meta[name=viewport]');
-  metaViewport.setAttribute('width', w);
-  metaViewport.setAttribute('height', h);
-  $("html").css({"width":w,"height":h});
-  $("body").css({"width":w,"height":h});
-}
-
-window.onresize = function (event) { this.viewport() };
