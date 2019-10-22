@@ -6,6 +6,10 @@ body {
   background: #000 !important;
   height: 100%;
 }
+
+*{
+  background: #f00 !important;
+}
 .background:first-child,
 .background:nth-child(2) {
   display: flex !important;
