@@ -257,7 +257,7 @@ function initMap() {
 $(document).ready(function(){
 
   var _originalSize = $(window).width() + $(window).height()
-  /* $(window).resize(function(){
+  $(window).resize(function(){
     if($(window).width() + $(window).height() != _originalSize){
       console.log("keyboard show up");
       $(".white").toggle();
@@ -265,7 +265,7 @@ $(document).ready(function(){
       console.log("keyboard closed");
       $(".white").toggle();
     }
-  }); */
+  });
 
   playVideo();
 });
