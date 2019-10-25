@@ -263,10 +263,10 @@ $(document).ready(function(){
     
     if($(window).height() < _originalSize){
       console.log("keyboard show up");
-      $(".white").toggle();
+      $(".white").hide();
     }else{
       console.log("keyboard closed");
-      $(".white").toggle();
+      $(".white").show();
     }
   });
 
