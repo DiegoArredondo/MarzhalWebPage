@@ -256,9 +256,12 @@ function initMap() {
 
 $(document).ready(function(){
 
-  var _originalSize = $(window).width() + $(window).height()
+  var _originalSize = $(window).height()
   $(window).resize(function(){
-    if($(window).width() + $(window).height() != _originalSize){
+
+    if(window.innerWidth > 768) return;
+    
+    if($(window).height() < _originalSize){
       console.log("keyboard show up");
       $(".white").toggle();
     }else{
